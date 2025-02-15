@@ -1,0 +1,16 @@
+[project]
+name = "hydpyhack2025"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=2.2.3",
+    "pytest>=8.3.4",
+    "requests>=2.32.3",
+    "scipy>=1.15.1",
+    "smallestai>=2.0.0",
+    "sounddevice>=0.5.1",
+    "wave>=0.0.2",
+    "yoyo-migrations>=9.0.0",
+]
