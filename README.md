@@ -9,6 +9,7 @@
 - Install uv and run `uv pip install`.
 - Run DB migrations `yoyo apply`.
 - Copy `env.example` to `.env` and modify SARVAM_AI_API value.
+- Run `export $(cat .env | xargs)`
 - Run `.venv/bin/python main.py` to start the agent.
 
 # Hackathon Slides
