@@ -47,7 +47,7 @@ class PlayAudio:
             self.can_record = False
         mini_thread.join()
         self.can_record = True
-        np.concatenate(audio_data, axis=0)
+        audio_data = np.concatenate(audio_data, axis=0)
         byte_buffer = BytesIO()
         writewav(byte_buffer, Audio.default_sample_rate, audio_data)
         recorded_audio = byte_buffer.getvalue()
