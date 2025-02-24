@@ -1,5 +1,4 @@
-# HydPyHack 2025
-## BulBul your fintech Agent
+# BulBul your fintech Agent
 - Generates personalized sales pitch for targeted customer and picks potential creditcard that matches to the interests of the customer.
 - Users can have a free flowing audio conversation with bulbul in knowing and understanding more about the product.
 - Users have control to end the conversation by voicing out `stop`.

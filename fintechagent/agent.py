@@ -21,8 +21,10 @@ class Agent:
 
     def converse(self, customer: Customer, product: Product):
         # Sales Agent Initial Pitch
-        question = f"Generate shortest sales pitch text for sales representative to speak to {customer.name} describing about the credit card information shared."
-        description = "prepare sales pitch as short as possible and include customer name in the pitch."
+        question = "Generate shortest sales pitch text for sales representative describing about the credit card information shared."
+        description = (
+            "prepare sales pitch as short as possible explaining about the benefits"
+        )
         customer_interactions = 0
         logger.info("Generating Initial Sales Pitch")
         while True:
@@ -49,7 +51,7 @@ class Agent:
             question = stt.text
             description = "Answer customer's question with provided context."
             for sp in self.stop_words:
-                if sp in question:
+                if sp in question or sp.lower() in question:
                     response = self.llm.tts("Thank you! Hope I served you better")
                     self.pa.play(response.audio)
                     return

@@ -22,11 +22,8 @@ def main():
     agent = Agent(sarvam)
 
     logger.info("Greeting to Audience")
-    response = sarvam.tts("Welcome to Hyderabad Python Hackathon by HyPy")
-    pa.play(response.audio)
-
     response = sarvam.tts(
-        "I'm bulbul your fintech agent. Let's see how Akhil solved Challenge 2. Now the Demo starts"
+        "I'm bulbul your fintech agent. Disclaimer: Please note I'm a bot and created only for demo purpose for tech event using a bank's publicly available credit card information. Now, I can help you in recommending suitable credit card for your needs and answer any questions you have about the product."
     )
     pa.play(response.audio)
 
@@ -41,6 +38,11 @@ def main():
             customer.name,
             product.title,
         )
+        response = sarvam.tts(
+            f"Hi {customer.name}, How are you doing ? I'm from RBL Bank, after analyzing your spends and needs I suggest you to apply for {product.title}. Here are the benefits: "
+        )
+        pa.play(response.audio)
+
         agent.converse(customer, product)
         # Comment below line to run sales pitch for all customers
         break
